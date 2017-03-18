@@ -24,9 +24,11 @@ class TuppenceLexer(RegexLexer):
 
             (r'\bdefine|exit|for|print|rationalize|while\b', Keyword),
             
-            (r'\b[_a-zA-Z][_a-zA-Z0-9]+\b', Name.Variable),
+            (r'\b[_a-zA-Z][_a-zA-Z0-9]*\b', Name.Variable),
 
             (r'(\(|\))', Punctuation),
             (r'(\{|\})', Punctuation),
+
+            (r'\,', Punctuation),
         ]
     }
